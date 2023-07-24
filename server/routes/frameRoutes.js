@@ -110,7 +110,7 @@ frameRoutes.post(
             image,
             price,
             multiLayer,
-
+            patch: true,
             category,
             user,
             approved: true, // Changed "true" to true

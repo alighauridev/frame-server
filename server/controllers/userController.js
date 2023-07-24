@@ -73,10 +73,12 @@ const updateUserProfile = asyncHandler(async (req, res) => {
     }
 });
 const allUsers = asyncHandler(async (req, res) => {
-    const users = await User.find({});
+    const users = await User.find({}).populate("frames artworks");
 
     res.json(users);
 });
+
+
 // GET all artists Admin
 const allArtists = asyncHandler(async (req, res) => {
     const artists = await User.find({ isArtist: true });

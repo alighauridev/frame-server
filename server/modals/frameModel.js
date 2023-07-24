@@ -28,6 +28,10 @@ const frameImageSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Category",
     },
+    patch: {
+        type: Boolean,
+        default: false
+    },
 
     multiLayer: {
         type: Boolean,
